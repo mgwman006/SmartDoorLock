@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form"
+
+    >
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:gravity="center"
+
+     android:layout_marginLeft="20dp"
+     android:layout_marginRight="20dp"
+     android:layout_marginTop="60dp"
+
+     >
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Smart Lock"
+         android:textSize="35dp"
+         android:textColor="@android:color/holo_green_dark"
+         android:layout_marginBottom="20dp"
+         />
+
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/colorPrimary"
+         android:text="@string/signUp"/>
+
+
+     <EditText
+          android:id="@+id/userEmail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+          android:paddingTop="5dp"
+          android:paddingBottom="5dp"
+          android:background="@drawable/borderstyle"
+          android:hint="@string/user_email"
+          android:inputType="textEmailAddress"/>
+
+      <EditText
+          android:id="@+id/auth_password"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+          android:paddingTop="5dp"
+          android:paddingBottom="5dp"
+          android:background="@drawable/borderstyle"
+          android:hint="@string/user_password"
+          android:inputType="textPassword"/>
+
+      <Button
+          android:id="@+id/button"
+          android:onClick="submitForm"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/borderstyle"
+          android:textColor="@color/colorPrimary"
+          android:text="@string/submit"/>
+
+  </LinearLayout>
+
+
+
+ </androidx.coordinatorlayout.widget.CoordinatorLayout>

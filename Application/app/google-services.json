@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "678067499655",
+    "firebase_url": "https://smartdoorlock-19459.firebaseio.com",
+    "project_id": "smartdoorlock-19459",
+    "storage_bucket": "smartdoorlock-19459.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678067499655:android:23db38fd6f06d2191efe22",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678067499655-u3b7ogvj95jasnntubjtdfartee07gt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcIqcmgBkL8PAlq6YUtOrDgNcMb0rvYfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678067499655-u3b7ogvj95jasnntubjtdfartee07gt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

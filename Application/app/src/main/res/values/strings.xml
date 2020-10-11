@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">SmartLock</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_user">Maneno Mgwami </string>
+    <string name="email">maneno.mgwami@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Smart Lock</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="menu_qr">QR code</string>
+    <string name="menu_remote">Remote Control</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_help">Help</string>
+    <string name="title_activity_form">Form</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="user_email">Enter Email</string>
+    <string name="user_password">Enter Password</string>
+    <string name="user_fullName">Enter Full Name</string>
+    <string name="user_phoneNumber">Enter Phone Number</string>
+    <string name="submit">Sign up</string>
+    <string name="my_image_description">testing image view</string>
+    <string name="welcome">Welcome</string>
+    <string name="signUp">Sign up to continue</string>
+
+</resources>
