@@ -33,5 +33,7 @@
     <string name="my_image_description">testing image view</string>
     <string name="welcome">Welcome</string>
     <string name="signUp">Sign up to continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

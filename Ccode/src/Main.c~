@@ -1,0 +1,33 @@
+
+#include <pic/pic18f4550>
+
+
+int main (void)
+{
+    ANSEL     = 0b00000000;
+    CMCON0    = 0x7;
+    TRISA     = 0b00001100;
+    TRISC     = 0b00000000;
+    
+    PORTA     = 0b00000000;
+    PORTC     = 0b00000000;
+    
+    while (true)
+    {
+        RC3  =  1;
+        delay();
+        RC3  = 0;
+        delay();
+    }
+}
+
+
+void delay ()
+{
+    for (int i==0, i < 5000, i++)
+    {
+        for (int j==0, j < 5000, j++)
+        {
+        }
+    }
+}

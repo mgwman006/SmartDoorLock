@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Help">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What can we help you?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="@drawable/borderstyle"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Please write your questions here!"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:paddingLeft="10dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -3,7 +3,9 @@ package com.example.application;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -12,20 +14,13 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.android.material.navigation.NavigationView;
 
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private AppBarConfiguration mAppBarConfiguration;
-    public FirebaseAuth mAuth;
-    private static final String TAG = "EmailPassword";
-
-// ...
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,65 +31,58 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home)
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_remote )
                 .setDrawerLayout(drawer)
                 .build();
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        //NavigationUI.setupWithNavController(navigationView, navController);
+        NavigationUI.setupWithNavController(navigationView, navController);
 
-
-
-
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
-       // mAuth.signOut();
+        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
 
 
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp()
+    {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
 
 
+
     @Override
-    public void onStart()
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
     {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        //System.out.println(currentUser.getEmail());
-        updateUI(currentUser);
-    }
-
-
-
-    public void updateUI (FirebaseUser currentUser)
-    {
-        if (currentUser == null)
+        if (item.getItemId() == R.id.nav_remote)
         {
-            Intent intent = new Intent( this, Form.class);
-            startActivity(intent);
-        }
+            Intent remote = new Intent(MainActivity.this, RemoteControl.class);
+            startActivity(remote);
 
-        else
+        }
+        else if (item.getItemId() == R.id.nav_qr)
         {
-            // signOut();
+            Intent remote = new Intent(MainActivity.this, QRMenu.class);
+            startActivity(remote);
         }
+        else if (item.getItemId() == R.id.nav_settings)
+        {
+            Intent remote = new Intent(MainActivity.this, Settings.class);
+            startActivity(remote);
+
+        }
+        else if (item.getItemId() == R.id.nav_help)
+        {
+            Intent remote = new Intent(MainActivity.this, Help.class);
+            startActivity(remote);
+        }
+        return false;
     }
-
-    private void signOut()
-    {
-        mAuth.signOut();
-       // updateUI(null);
-    }
-
-
 }
