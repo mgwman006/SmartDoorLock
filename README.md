@@ -1,7 +1,7 @@
 # SmartDoorLock
 
-KeyLess
-PinLess
-PriceLess
+KeyLess, 
+PinLess, 
+PriceLess, 
 PowerLess
 
