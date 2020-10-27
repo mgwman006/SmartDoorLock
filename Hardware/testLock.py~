@@ -1,0 +1,10 @@
+from gpiozero import Buzzer
+from time import sleep
+
+switch = Buzzer(18)
+
+while True:
+    switch.on()
+    sleep(5)
+    switch.off()
+    sleep(5)
