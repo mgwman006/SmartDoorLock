@@ -19,7 +19,7 @@ def takePicture():
     
     camera.start_preview()
     sleep(5)
-    fileName = "/home/pi/SmartLock/Hardware/testImage/finaltestedImage.jpg"
+    fileName = "/home/pi/r/SmartDoorLock/Hardware/testImage/finaltestedImage.jpg"
     camera.capture(fileName) 
     camera.stop_preview()
     decodedKey = qrDecode()
@@ -30,11 +30,12 @@ def takePicture():
 
 def qrDecode():
 
-    fileSource = "/home/pi/SmartLock/Hardware/testImage/finaltestedImage.jpg"
+    fileSource = "/home/pi/r/SmartDoorLock/Hardware/testImage/finaltestedImage.jpg"
     with open(fileSource, 'rb') as imageFile:
         image=Image.open(fileSource)
         image.load()
-        
+    
+    #newImage=zbarlight.copy_image_on_background(image, color=zbarlight.WHITE)    
     code=zbarlight.scan_codes(['qrcode'],image)
     return code
 

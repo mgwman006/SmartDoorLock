@@ -9,7 +9,7 @@ from time import sleep
 switch = OutputDevice(18)
 button = Button (4)
 
-originalKey = "maneno.mgwami@gmail.com"
+originalKey = ["maneno.mgwami@gmail.com"]
 doorStatus = "closed"
 
 
@@ -31,6 +31,7 @@ def closeDoor():
 def scanner():
     
     key=Camera.takePicture()
+    print(key)
     if (key == originalKey):
         openDoor()
     
@@ -69,8 +70,9 @@ def startMQTTClient():
         
         
 while True:
-
-    startMQTTClient()
+    
     button.when_pressed = scanner
+    startMQTTClient()
+    #button.when_pressed = scanner
     sleep(2)
     
